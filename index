@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja prva web stranica</title>
+</head>
+<body>
+    <h1>Bok, ja sam Veronika!</h1>
+
+    <p>Ovo je moja prva web stranica.</p>
+
+    <h2>Moji hobiji</h2>
+    <ul>
+        <li>Programiranje</li>
+        <li>Putovanja</li>
+        <li>Glazba</li>
+    </ul>
+
+    <button>Klikni me</button>
+</body>
+</html>
