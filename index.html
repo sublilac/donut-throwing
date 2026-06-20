@@ -18,8 +18,49 @@
         <li>Glazba</li>
         <li>Rolanje</li>
     </ul>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>GIF prezentacija</title>
+</head>
+<body>
 
-    <button>Klikni me</button> 
-    <img src="giff.gif" alt="GIF">
+    <img id="gif" src="gif1.gif" width="500">
+
+    <br><br>
+
+    <button onclick="prethodniGif()">Prethodni</button>
+    <button onclick="sljedeciGif()">Sljedeći</button>
+
+    <script>
+        const gifovi = [
+            "gif1.gif",
+            "gif2.gif",
+            "gif3.gif"
+        ];
+
+        let trenutni = 0;
+
+        function sljedeciGif() {
+            trenutni++;
+
+            if (trenutni >= gifovi.length) {
+                trenutni = 0;
+            }
+
+            document.getElementById("gif").src = gifovi[trenutni];
+        }
+
+        function prethodniGif() {
+            trenutni--;
+
+            if (trenutni < 0) {
+                trenutni = gifovi.length - 1;
+            }
+
+            document.getElementById("gif").src = gifovi[trenutni];
+        }
+    </script>
+
 </body>
 </html>
