@@ -6,46 +6,53 @@
     <title>Veronikini</title>
 </head>
 <body>
-    <h1>Bok, ja sam Veronika!</h1>
-    <h1>proba proba</h1>
+    <h1>🎀  𝐻𝒾, 𝐼 𝒶𝓂 𝒶 𝒱𝑒𝓇🏵𝓃𝒾𝓀𝒶  🎀  </h1>
+    <h1>ᵢ wᵢₗₗ bₑ ₒᵥₑᵣₛₑₑᵢₙg yₒᵤᵣ Cybₑᵣₚᵤₙₖ ₂₀₇₇ gₐₘₑₚₗₐy </h1>
 
-    <p>Ovo je moja prva web stranica.</p>
+    <p>𝔞𝔲𝔯𝔞 𝔰𝔥𝔞𝔯𝔦𝔫𝔤 𝔦𝔰 𝔞𝔲𝔯𝔞 𝔠𝔞𝔯𝔦𝔫𝔤</p>
+    <p>♥ 𝖕𝖗𝖊𝖑𝖎𝖘𝖙𝖆𝖏 𝖌𝖎𝖋𝖔𝖛𝖊 ♥</p>
 
-    <h2>Moji hobiji</h2>
-    <ul>
-        <li>Programiranje</li>
-        <li>Putovanja</li>
-        <li>Glazba</li>
-        <li>Rolanje</li>
-    </ul>
+    <button onclick="gothicConfetti()">Jeej 💀</button>
+
+    <div id="darknessText">YOU SUMMONED DARKNESS</div>
+     <script>
+        function gothicConfetti() {
+            const symbols = ["💀", "🖤", "❤️", "🩸"];
+
+            for (let i = 0; i < 40; i++) {
+                const el = document.createElement("div");
+                el.classList.add("particle");
+
+                el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+
+                el.style.left = "50%";
+                el.style.top = "50%";
+
+                el.style.setProperty("--x", (Math.random() * 500 - 250) + "px");
+                el.style.setProperty("--y", (Math.random() * 500 - 250) + "px");
+
+                document.body.appendChild(el);
+
+                setTimeout(() => el.remove(), 1500);
+            }
+
+            const text = document.getElementById("darknessText");
+            text.style.opacity = "1";
+
+            setTimeout(() => {
+                text.style.opacity = "0";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
 <audio id="music" loop>
     <source src="home menu.mp3" type="audio/mpeg">
 </audio>
-<style>
-.btn {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.btn:active {
-    transform: translateY(0px);
-}
-</style>
 <button onclick="toggleMusic()" id="musicBtn">
-    Pusti glazbu 🎵
-</button>
+    Pusti glazbu 🎵 </button>
 
 <script>
 function toggleMusic() {
@@ -107,6 +114,5 @@ function toggleMusic() {
             document.getElementById("gif").src = gifovi[trenutni];
         }
     </script>
-
 </body>
 </html>
